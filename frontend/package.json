@@ -1,27 +1,31 @@
 {
-  "name": "observous",
+  "name": "observous-frontend",
   "version": "1.0.0",
-  "description": "document tracking app",
+  "description": "student reading activity tracking",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "watch:sass": "node-sass src/sass/main.scss src/css/style.css -w",
     "devserver": "live-server --browser=firefox",
     "start": "npm-run-all --parallel devserver watch:sass",
-    "compile:sass": "node-sass sass/main.scss css/style.comp.css",
-    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
-    "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+    "compile:sass": "node-sass src/sass/main.scss src/css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' src/css/style.comp.css -o src/css/style.prefix.css",
+    "compress:css": "node-sass src/css/style.prefix.css src/css/style.css --output-style compressed",
     "build:css": "npm-run-all compile:sass prefix:css compress:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/nabeel_mohammed/summer2020.cse327.2.6/src/master/"
   },
   "author": "K.M.H.Mubin",
   "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^5.0.0-alpha1",
+    "bootstrap-icons": "^1.0.0"
+  },
   "devDependencies": {
     "autoprefixer": "^9.8.6",
     "node-sass": "^4.14.1",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^7.1.2"
-  },
-  "dependencies": {
-    "bootstrap": "^5.0.0-alpha1",
-    "bootstrap-icons": "^1.0.0"
   }
 }

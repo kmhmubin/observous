@@ -1,0 +1,39 @@
+.login_logo {
+  height: 7rem;
+  width: 7rem;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.welcome {
+  margin-top: -30px;
+  font-family: $quicksand;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2.2em;
+  line-height: 3em;
+  color: #404040;
+}
+
+/* Login to continue */
+.continue {
+  margin-top: -30px;
+  font-family: $quicksand;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 25px;
+  color: #767676;
+}
+
+.submit-button {
+  font-family: $quicksand;
+  font-style: normal;
+  font-weight: bold;
+  color: #353535;
+  background: #ffffff;
+  border: 1px solid #e1e1e1;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}

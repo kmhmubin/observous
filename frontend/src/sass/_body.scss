@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+// font variable
+$quicksand: "Quicksand", sans-serif;
+
+// color variables
+$white: #ffffff;
+$full_black: #000000;
+$light_black: #272727;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: $white;
+  //   box-sizing: content-box;
+}
+
+a {
+  text-decoration: none;
+  color: $full_black;
+}
+
+li a {
+  text-decoration: none;
+  color: $light_black;
+  font-family: $quicksand;
+  font-weight: 500;
+  font-size: 1.1em;
+  display: inline-block;
+}
+
+// hover effect
+.cool-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background: $full_black;
+  transition: width 0.3s;
+}
+
+.cool-link:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
